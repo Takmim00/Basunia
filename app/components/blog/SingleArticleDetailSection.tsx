@@ -127,9 +127,11 @@ export default function SingleArticleDetailSection({
                   <div>
                     <Link
                       href={`/blog/${blog.slug}/${sideItem.id}`}
+                      aria-label={`Read full article: ${sideItem.title}`}
                       className="font-switzer inline-flex items-center gap-1 text-xs text-[#8E1831] hover:text-[#761328] transition-colors font-medium"
                     >
                       <span>Read more</span>
+                      <span className="sr-only"> about {sideItem.title}</span>
                       <svg
                         className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-1"
                         viewBox="0 0 24 24"

@@ -5,20 +5,31 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-b from-[#EDEDED] via-[#F4F5F7] to-[#E3E5E8] pt-32 sm:pt-36 md:pt-40 lg:pt-44">
-      {/* Background Soft Radial Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_35%,rgba(255,255,255,0.95),rgba(235,238,242,0)_80%)] pointer-events-none" />
+    <section className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#EDEDED] via-[#F4F5F7] to-[#E3E5E8] pt-24 sm:pt-28 md:pt-32 lg:pt-36">
+      {/* Hero Background Banner */}
+      <div className="absolute inset-0 pointer-events-none select-none z-0">
+        <Image
+          src="/assets/images/hero.webp"
+          alt="Basunia & Associate Legal Background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        {/* Soft White Shade Overlay in the center for clear text legibility */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_62%_80%_at_48%_42%,rgba(255,255,255,0.93)_0%,rgba(255,255,255,0.80)_35%,rgba(255,255,255,0.40)_65%,rgba(255,255,255,0)_100%)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-white/35 to-transparent" />
+      </div>
 
       {/* Main Hero Content Area */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24 lg:pb-28">
+      <div className="relative flex-1 flex flex-col justify-center items-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 lg:py-12">
         
         {/* Centered Main Hero Text Block */}
         <div className="relative z-20 max-w-2xl lg:max-w-3xl mx-auto text-center flex flex-col items-center justify-center">
           
           {/* Cursive Subtitle */}
           <p
-            className="font-marck-script text-3xl sm:text-4xl md:text-5xl lg:text-[64px] text-[#222222]  mb-1 sm:mb-2 "
-
+            className="font-marck-script text-3xl sm:text-4xl md:text-5xl lg:text-[64px] text-[#222222] mb-1 sm:mb-2"
           >
             We help good people
           </p>
@@ -32,7 +43,7 @@ export default function HeroSection() {
 
           {/* Subtitle Paragraph */}
           <p
-            className="font-switzer text-slate-600 text-xs sm:text-sm md:text-base max-w-md md:max-w-lg mx-auto leading-relaxed mb-8 sm:mb-10 px-2"
+            className="font-switzer text-slate-700 text-xs sm:text-sm md:text-base max-w-md md:max-w-lg mx-auto leading-relaxed mb-8 sm:mb-10 px-2"
           >
             We strive to explain the most complex legal issues in an easy to understand manner.
           </p>
@@ -67,7 +78,7 @@ export default function HeroSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Contact Basunia & Associate via WhatsApp"
-              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg bg-white text-slate-800  text-lg sm:text-base shadow-sm border border-slate-200/90 hover:bg-slate-50 hover:shadow-md hover:border-slate-300 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg bg-white text-slate-800 text-lg sm:text-base shadow-sm border border-slate-200/90 hover:bg-slate-50 hover:shadow-md hover:border-slate-300 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
             >
               <svg
                 className="w-5 h-5 text-[#25D366] fill-current"
@@ -81,24 +92,10 @@ export default function HeroSection() {
 
         </div>
 
-        {/* Right Side 3D Gavel - positioned cleanly at the right side bottom */}
-        <div className="mt-8 lg:mt-0 flex justify-center lg:block lg:absolute lg:right-0 xl:right-6 2xl:right-16 lg:bottom-4 xl:bottom-6 pointer-events-none z-10">
-          <div className="relative w-52 sm:w-60 md:w-68 lg:w-[280px] xl:w-[320px] 2xl:w-[350px] aspect-square transition-transform duration-500 hover:scale-105">
-            <Image
-              src="/assets/images/gavel.png"
-              alt="Judge Gavel and Sound Block"
-              width={600}
-              height={600}
-              priority
-              className="w-full h-full object-contain select-none"
-            />
-          </div>
-        </div>
-
       </div>
 
       {/* Bottom Features & Trust Bar */}
-      <div className="w-full border-t border-slate-300/80 bg-[#E2E5E8]/90 backdrop-blur-md py-4 sm:py-5 px-4 sm:px-6 lg:px-8">
+      <div className="w-full border-t border-slate-300/80 bg-[#E2E5E8]/90 backdrop-blur-md py-4 sm:py-5 px-4 sm:px-6 lg:px-8 shrink-0 mt-auto">
         <div className="max-w-7xl mx-auto">
           <div className="font-inter grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-0 lg:divide-x lg:divide-slate-300/80">
             

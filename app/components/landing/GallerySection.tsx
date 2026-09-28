@@ -15,32 +15,32 @@ export default function GallerySection() {
 
   const images = {
     col1Bottom: {
-      src: "/assets/images/gallery/gallery-img-1.jpg",
+      src: "/assets/images/gallery/gallery-img-1.webp",
       alt: "Legal consultation and document review in conference room",
       caption: "Legal Consultation & Document Review",
     },
     col2Top: {
-      src: "/assets/images/gallery/gallery-img-2.jpg",
+      src: "/assets/images/gallery/gallery-img-2.webp",
       alt: "Judicial strategy and case analysis on legal dossier",
       caption: "Judicial Strategy & Case Analysis",
     },
     col2Bottom: {
-      src: "/assets/images/gallery/gallery-img-3.jpg",
+      src: "/assets/images/gallery/gallery-img-3.webp",
       alt: "Commercial settlement and corporate agreement in law firm",
       caption: "Commercial Settlement & Agreement",
     },
     col3Top: {
-      src: "/assets/images/gallery/gallery-img-4.jpg",
+      src: "/assets/images/gallery/gallery-img-4.webp",
       alt: "Law library with vintage legal volumes and reference books",
       caption: "Comprehensive Legal Reference Library",
     },
     col3Bottom: {
-      src: "/assets/images/gallery/gallery-img-5.jpg",
+      src: "/assets/images/gallery/gallery-img-5.webp",
       alt: "Case strategy and legal document analysis session",
       caption: "Case Strategy & Document Analysis",
     },
     col4Top: {
-      src: "/assets/images/gallery/gallery-img-6.jpg",
+      src: "/assets/images/gallery/gallery-img-6.webp",
       alt: "Scales of justice and judicial gavel on legal desk",
       caption: "Professional Legal Representation",
     },
@@ -183,9 +183,11 @@ export default function GallerySection() {
           >
             <Link
               href="/about"
+              aria-label="See more about Basunia & Associate law firm and our legal team"
               className="inline-flex items-center justify-center gap-2 px-5 py-2.5 xl:px-6 xl:py-2.5 border border-[#8E1831] text-[#8E1831] font-switzer text-sm sm:text-[14.5px] font-normal transition-all duration-300 hover:bg-[#8E1831] hover:text-white group/btn active:scale-95 shadow-sm hover:shadow"
             >
               <span>See more</span>
+              <span className="sr-only"> about Basunia &amp; Associate law firm and our legal team</span>
               <svg
                 className="w-3.5 h-3.5 stroke-current transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"
                 viewBox="0 0 24 24"
@@ -310,9 +312,11 @@ export default function GallerySection() {
           <div className="flex justify-end mt-6">
             <Link
               href="/about"
+              aria-label="See more about Basunia & Associate law firm and our legal team"
               className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-[#8E1831] text-[#8E1831] font-switzer text-sm font-medium transition-all duration-300 hover:bg-[#8E1831] hover:text-white group/btn active:scale-95 shadow-sm"
             >
               <span>See more</span>
+              <span className="sr-only"> about Basunia &amp; Associate law firm and our legal team</span>
               <svg
                 className="w-3.5 h-3.5 stroke-current transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"
                 viewBox="0 0 24 24"

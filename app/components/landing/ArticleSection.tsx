@@ -131,9 +131,11 @@ export default function ArticleSection({
               <div className="mt-auto">
                 <Link
                   href={article.href || "/blog"}
-                  className="font-switzer inline-flex items-center gap-2 text-base  text-[#8E1831] hover:text-[#761328] transition-colors"
+                  aria-label={`Read full article: ${article.title}`}
+                  className="font-switzer inline-flex items-center gap-2 text-base text-[#8E1831] hover:text-[#761328] transition-colors"
                 >
                   <span>Read more</span>
+                  <span className="sr-only"> about {article.title}</span>
                   <svg
                     className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1.5"
                     viewBox="0 0 24 24"

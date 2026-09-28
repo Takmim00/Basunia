@@ -9,10 +9,10 @@ interface LawyersHeroBannerProps {
 
 export default function LawyersHeroBanner({
   title = "OUR TEAM",
-  bgImage = "/assets/images/Frame 2147229286.png",
+  bgImage = "/assets/images/Frame 2147229286.webp",
 }: LawyersHeroBannerProps) {
   return (
-    <section className="relative w-full h-[240px] sm:h-[300px] md:h-[360px] lg:h-[400px] bg-slate-900 flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[240px] sm:h-[300px] md:h-[380px] bg-slate-900 flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <Image
         src={bgImage}
